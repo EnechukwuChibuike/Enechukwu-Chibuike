@@ -32,10 +32,10 @@ function Resume({
   };
   return (
     <div id="resume">
-      <div className="flex h-fit bg-[#0b0c10] pl-[100px] pr-[100px] border-b-[1px] border-[#c5c6c7] pb-[200px]">
-        <div className="basis-[70vw]">
+      <div className="flex h-fit bg-dark px-[50px] md:px-[100px] border-b-[1px] border-gray  pb-[100px] md:pb-[200px]">
+        <div className="basis-[70vw] hidden md:block">
           <nav
-            className={`text-[#c5c6c7] gap-5 text-[20px] flex flex-col justify-center font-bold h-screen ${sticky}`}
+            className={`text-gray gap-5 text-[20px] flex flex-col justify-center font-bold h-screen ${sticky}`}
           >
             <a
               data-to-scrollspy-id="experience"
@@ -55,7 +55,7 @@ function Resume({
         <div className="min-h-[200vh] h-fit">
           <ScrollSpy scrollThrottle={100} useBoxMethod={false}>
             <div id="experience">
-              <h1 className="text-[#66fcf1] text-4xl font-[900] mt-60">
+              <h1 className="text-primary text-4xl font-[900] mt-32 md:mt-60">
                 Experience
               </h1>
               <Experience
@@ -94,9 +94,7 @@ function Resume({
               />
             </div>
             <div id="skills">
-              <h1 className="text-[#66fcf1] text-4xl font-[900] mt-32">
-                Skills
-              </h1>
+              <h1 className="text-primary text-4xl font-[900] mt-32">Skills</h1>
               <div className="mt-[50px]">
                 <Skills skill={"HTML"} width={"w-[99%]"} percent={"99%"} />
                 <Skills skill={"CSS"} width={"w-[99%]"} percent={"99%"} />
@@ -117,9 +115,7 @@ function Resume({
               </div>
             </div>
             <div id="awards">
-              <h1 className="text-[#66fcf1] text-4xl font-[900] mt-32">
-                Awards
-              </h1>
+              <h1 className="text-primary text-4xl font-[900] mt-32">Awards</h1>
               <Experience
                 year={"2023 - Present"}
                 institute={"LearnFactory Nigeria"}

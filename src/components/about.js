@@ -3,11 +3,11 @@ import "../styles/about.css";
 function About() {
   return (
     <div
-      className="h-screen flex justify-between items-center bg-[#45a29e] pl-[100px] pr-[100px]"
+      className="h-screen w-full flex justify-between items-center bg-[#45a29e] px-[50px] md:px-[100px]"
       id="about"
     >
-      <div className="h-screen w-[60vw] aboutImg"></div>
-      <div className="grid ml-20">
+      <div className="hidden md:block h-screen w-1/2 aboutImg"></div>
+      <div className="grid md:ml-20 w-full md:w-1/2">
         <h1 className="text-[60px] font-[900] text-[#0b0c10]">About Me</h1>
         <p className="text-[#1f2833]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae
