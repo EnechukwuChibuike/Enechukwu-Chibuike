@@ -1,0 +1,9 @@
+.aboutImg {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(9, 9, 10, 0.76),
+      rgba(3, 3, 3, 0.73)
+    ),
+    url("../images/aboutImg.png");
+  background-size: cover;
+}
