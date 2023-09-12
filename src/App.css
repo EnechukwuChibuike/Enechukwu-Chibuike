@@ -6,3 +6,7 @@
   background-color: #0b0c10;
   height: 100vh;
 }
+
+.input {
+  @apply h-12 pl-3 rounded-md bg-gray w-[90%];
+}

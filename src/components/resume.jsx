@@ -103,6 +103,7 @@ function Resume({
                   percent={"90%"}
                 />
                 <Skills skill={"React"} width={"w-[85%]"} percent={"85%"} />
+                <Skills skill={"Nextjs"} width={"w-[85%]"} percent={"85%"} />
                 <Skills
                   skill={"Typescript"}
                   width={"w-[75%]"}
@@ -110,6 +111,7 @@ function Resume({
                 />
                 <Skills skill={"Tailwind"} width={"w-[85%]"} percent={"85%"} />
                 <Skills skill={"GraphQL"} width={"w-[70%]"} percent={"70%"} />
+                <Skills skill={"Express"} width={"w-[70%]"} percent={"70%"} />
                 <Skills skill={"Bootstrap"} width={"w-[80%]"} percent={"80%"} />
               </div>
             </div>

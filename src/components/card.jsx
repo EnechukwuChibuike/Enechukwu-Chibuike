@@ -5,7 +5,9 @@ function Card(props) {
     >
       <span className="text-gray text-4xl">{props.icon}</span>
       <h2 className="text-primary text-2xl">{props.service}</h2>
-      <p className="text-gray mx-10">{props.servicedes}</p>
+      <a href={props.href} className="mx-10 text-[blue]">
+        {props.servicedes}
+      </a>
     </div>
   );
 }
