@@ -12,7 +12,7 @@ function Project(props) {
   };
 
   return (
-    <div className="h-[50vh] w-[30vw]">
+    <div className="h-[50vh] w-[80vw] sm:w-[40vw] md:w-[30vw] mt-10">
       <a
         href={props.link}
         onMouseOver={displayBlock}
@@ -21,7 +21,7 @@ function Project(props) {
         rel="noreferrer"
       >
         <div
-          className={`${display} h-[50vh] flex items-center justify-center absolute w-[30vw] bg-[#1f2833]`}
+          className={`${display} h-[50vh] flex items-center justify-center absolute w-[80vw] sm:w-[40vw] md:w-[30vw] bg-[#1f2833]`}
         >
           <h2 className="text-primary underline font-bold">{props.name}</h2>
         </div>

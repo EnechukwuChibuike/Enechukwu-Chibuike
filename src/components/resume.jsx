@@ -22,7 +22,6 @@ function Resume({
 
   const isSticky = () => {
     const scrollTop = window.scrollY;
-    console.log(scrollTop);
     const stickyClass = scrollTop >= 1250 ? "fixed top-0 z-0" : "";
     setSticky(stickyClass);
     const removeSticky = "bg-white";

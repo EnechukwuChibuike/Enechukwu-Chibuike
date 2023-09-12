@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./card";
+import { FaServicestack } from "react-icons/fa";
 
 function Services() {
   return (
@@ -18,18 +19,21 @@ function Services() {
             "h-64 md:w-[30vw] hover:bg-[rgba(0,0,0,0.9)] sm:w-[60vw] w-[80vw]"
           }
           service={"WEB DEVELOPMENT"}
+          icon={<FaServicestack />}
         />
         <Card
           classes={
             "h-64 md:w-[30vw] hover:bg-[rgba(0,0,0,0.9)] sm:w-[60vw] w-[80vw]"
           }
           service={"INSTRUCTOR"}
+          icon={<FaServicestack />}
         />
         <Card
           classes={
             "h-64 md:w-[30vw] hover:bg-[rgba(0,0,0,0.9)] sm:w-[60vw] w-[80vw]"
           }
           service={"CONTENT WRITER"}
+          icon={<FaServicestack />}
         />
       </div>
     </div>
