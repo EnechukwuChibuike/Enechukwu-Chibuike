@@ -7,7 +7,8 @@ import Services from "./components/services";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Resume from "./components/resume";
-import ScrollSpy from "react-ui-scrollspy";
+import ScrollspyNav from "react-scrollspy-nav";
+import Footer from "./components/footer";
 
 function App(logo, height) {
   const [menu, setMenu] = useState(false);
@@ -42,77 +43,67 @@ function App(logo, height) {
   return (
     <>
       <div className="App" id="home">
-        <Header className={sticky}>
-          <Logo
-            href="https://preview.colorlib.com/#ronaldo"
-            target="blank"
-            className={stickyNav}
-          >
-            Enechukwu
-          </Logo>
-          <Div style={{ height: `${menu === false ? "0vh" : "50vh"}` }}>
-            <Nav
-              data-to-scrollspy-id="home"
+        <ScrollspyNav
+          scrollTargetIds={[
+            "home",
+            "about",
+            "services",
+            "resume",
+            "contact",
+            "projects",
+          ]}
+          activeNavClass="active"
+        >
+          <Header className={sticky}>
+            <Logo
+              href="https://preview.colorlib.com/#ronaldo"
+              target="blank"
               className={stickyNav}
-              href="#home"
-              style={{ marginTop: `${menu === false ? "" : "20px"}` }}
             >
-              Home
-            </Nav>
-            <Nav
-              className={stickyNav}
-              href="#about"
-              data-to-scrollspy-id="about"
-            >
-              About
-            </Nav>
-            <Nav
-              className={stickyNav}
-              href="#resume"
-              data-to-scrollspy-id="resume"
-            >
-              Resume
-            </Nav>
-            <Nav
-              className={stickyNav}
-              href="#services"
-              data-to-scrollspy-id="services"
-            >
-              Services
-            </Nav>
-            <Nav
-              className={stickyNav}
-              href="#projects"
-              data-to-scrollspy-id="projects"
-            >
-              Projects
-            </Nav>
-            <Nav
-              className={stickyNav}
-              href="#contact"
-              data-to-scrollspy-id="contact"
-            >
-              Contact
-            </Nav>
-          </Div>
-          <Media onClick={handleClick}>
-            <Menu>
-              <MenuIcon></MenuIcon>
-              <MenuIcon></MenuIcon>
-              <MenuIcon></MenuIcon>
-            </Menu>
-            <p>MENU</p>
-          </Media>
-        </Header>
+              Enechukwu
+            </Logo>
+            <Div style={{ height: `${menu === false ? "0vh" : "50vh"}` }}>
+              <Nav
+                className={stickyNav}
+                href="#home"
+                style={{ marginTop: `${menu === false ? "" : "20px"}` }}
+              >
+                Home
+              </Nav>
+              <Nav className={stickyNav} href="#about">
+                About
+              </Nav>
+              <Nav className={stickyNav} href="#resume">
+                Resume
+              </Nav>
+              <Nav className={stickyNav} href="#services">
+                Services
+              </Nav>
+              <Nav className={stickyNav} href="#projects">
+                Projects
+              </Nav>
+              <Nav className={stickyNav} href="#contact">
+                Contact
+              </Nav>
+            </Div>
+            <Media onClick={handleClick}>
+              <Menu>
+                <MenuIcon></MenuIcon>
+                <MenuIcon></MenuIcon>
+                <MenuIcon></MenuIcon>
+              </Menu>
+              <p>MENU</p>
+            </Media>
+          </Header>
+        </ScrollspyNav>
 
-        <ScrollSpy scrollThrottle={100} useBoxMethod={false}>
-          <Home height={stickyHeight} />
-          <About />
-          <Resume />
-          <Services />
-          <Projects />
-          <Contact />
-        </ScrollSpy>
+        <Home height={stickyHeight} />
+        <About />
+        <Resume />
+        <Services />
+        <Projects />
+        <Contact />
+        <Footer />
       </div>
     </>
   );

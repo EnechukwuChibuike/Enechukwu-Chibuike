@@ -1,4 +1,5 @@
 import "../styles/about.css";
+import CV from "../images/MyCV.pdf";
 
 function About() {
   return (
@@ -14,29 +15,31 @@ function About() {
           consequatur officia iste qui earum molestias, nisi alias
         </p>
         <div className="flex items-center mt-5">
-          <p className="text-[#0b0c10] font-bold">Name:</p>
-          <p className="text-[#1f2833] ml-10">Enechukwu Chibuike</p>
+          <p className="text-dark font-bold">Name:</p>
+          <p className="text-darkgray ml-10">Enechukwu Chibuike</p>
         </div>
         <div className="flex items-center mt-5">
-          <p className="text-[#0b0c10] font-bold">Email:</p>
-          <p className="text-[#1f2833] ml-10">enechukwuchibuike0@gmail.com</p>
+          <p className="text-dark font-bold">Email:</p>
+          <p className="text-darkgray ml-10">enechukwuchibuike0@gmail.com</p>
         </div>
         <div className="flex items-center mt-5">
-          <p className="text-[#0b0c10] font-bold">Phone:</p>
-          <p className="text-[#1f2833] ml-10">+234 9034 921053</p>
+          <p className="text-dark font-bold">Phone:</p>
+          <p className="text-darkgray ml-10">+234 9034 921053</p>
         </div>
         <div className="flex items-center mt-5">
-          <p className="text-[#0b0c10] font-bold">Github:</p>
-          <p className="text-[#1f2833] ml-10">EnechukwuChibuike</p>
+          <p className="text-dark font-bold">Github:</p>
+          <p className="text-darkgray ml-10">EnechukwuChibuike</p>
         </div>
         <div className="flex items-center mt-5">
-          <p className="text-[#0b0c10] font-bold">Medium:</p>
-          <p className="text-[#1f2833] ml-10">@enechukwuchibuike0</p>
+          <p className="text-dark font-bold">Medium:</p>
+          <p className="text-darkgray ml-10">@enechukwuchibuike0</p>
         </div>
         <p className="font-bold mt-10">Know more about me</p>
-        <button className="mt-5 bg-[#0b0c10] text-[#66fcf1] w-[200px] h-[50px] rounded-3xl">
-          Download CV
-        </button>
+        <a href={CV} download>
+          <button className="mt-5 bg-dark hover:bg-black text-[#66fcf1] w-[200px] h-[50px] rounded-3xl">
+            Download CV
+          </button>
+        </a>
       </div>
     </div>
   );

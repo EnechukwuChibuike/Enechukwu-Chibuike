@@ -1,8 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.active-scroll-spy {
-  color: #66fcf1;
-  border-bottom: 3px solid #66fcf1;
-}

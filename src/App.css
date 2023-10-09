@@ -10,3 +10,8 @@
 .input {
   @apply h-12 pl-3 rounded-md bg-gray w-[90%];
 }
+
+.active {
+  color: #66fcf1;
+  border-bottom: 3px solid #66fcf1;
+}
