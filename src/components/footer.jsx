@@ -9,10 +9,10 @@ function Footer() {
         <div className="w-[80vw] md:w-[30vw] mb-10">
           <h2 className="text-primary text-2xl">About Me</h2>
           <p className="text-gray pt-5 w-full md:w-[80%]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe in
-            autem corrupti veritatis aperiam a modi magnam asperiores facilis
-            dolor harum impedit accusamus delectus, facere quis? Unde qui
-            voluptatibus recusandae.
+            A passionate web developer with over 4 years of hands-on experience
+            in crafting digital experiences. I'm also known for my role as an
+            enthusiastic and effective instructor, helping others unlock the
+            magic of web development.
           </p>
         </div>
 

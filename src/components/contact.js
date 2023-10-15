@@ -10,7 +10,7 @@ function Contact() {
     >
       <h1 className="text-[#66fcf1] text-5xl font-[900]">Contact Me</h1>
       <p className=" mt-3 text-[#c5c6c7] px-10">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae aut
+        Let's connect and create web magic together.
       </p>
 
       <div className="flex justify-center">

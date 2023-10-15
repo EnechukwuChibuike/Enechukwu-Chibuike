@@ -17,7 +17,7 @@ function Projects() {
     >
       <h1 className="text-[#66fcf1] text-5xl font-[900]">Projects</h1>
       <p className=" my-3 text-[#c5c6c7] px-10">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae aut
+        Explore My Portfolio of Digital Creations.
       </p>
 
       <div className="flex justify-around md:justify-between flex-wrap min-h-screen">

@@ -11,8 +11,10 @@ function About() {
       <div className="grid md:ml-20 w-full md:w-1/2">
         <h1 className="text-[60px] font-[900] text-[#0b0c10]">About Me</h1>
         <p className="text-[#1f2833]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque beatae
-          consequatur officia iste qui earum molestias, nisi alias
+          Hello, I'm a passionate web developer with over 4 years of hands-on
+          experience in crafting digital experiences. I'm also known for my role
+          as an enthusiastic and effective instructor, helping others unlock the
+          magic of web development.
         </p>
         <div className="flex items-center mt-5">
           <p className="text-dark font-bold">Name:</p>

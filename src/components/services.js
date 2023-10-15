@@ -10,7 +10,7 @@ function Services() {
     >
       <h1 className="text-[#66fcf1] text-5xl font-[900]">Services</h1>
       <p className=" mt-3 text-[#c5c6c7] px-10">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae aut
+        Turning Ideas into Digital Solutions.
       </p>
 
       <div className="flex justify-around w-full h-fit flex-wrap mt-10">
