@@ -14,24 +14,28 @@ function Contact() {
       </p>
 
       <div className="flex justify-center">
-        <div className="flex justify-around w-[65vw] items-center h-[80vh] mt-10 border-[1px] border-slate-600">
-          <div className="flex justify-between flex-col h-[70vh]">
+        <div className="flex flex-col md:flex-row md:justify-around w-[65vw] items-center h-fit md:h-[80vh] mt-10 md:border-[1px] md:border-slate-600">
+          <div className="flex items-center justify-between flex-col h-[70vh]">
             <Card
-              classes={"h-[30vh] mt-0 bg-[#0b0c10] sm:w-[20vw] w-[80vw]"}
+              classes={
+                "h-[50vh] md:h-[30vh] mt-0 bg-[#0b0c10] md:w-[20vw] w-[80vw] md:bg-transparent bg-darkgray"
+              }
               icon={<BsFillTelephoneFill />}
               service={"Contact Number"}
               servicedes={"+234 9034 921 053"}
               href={"tel:+2349034921053"}
             />
             <Card
-              classes={"h-[30vh] mt-5 bg-[#0b0c10] sm:w-[20vw] w-[80vw]"}
+              classes={
+                "h-[50vh] md:h-[30vh] mt-5 bg-[#0b0c10] md:w-[20vw] w-[80vw] md:bg-transparent bg-darkgray"
+              }
               icon={<BsFillSendFill />}
               service={"Email Address"}
               servicedes={"enechukwuchibuike0@gmail.com"}
               href={"mailto:enechukwuchibuike0@gmail.com"}
             />
           </div>
-          <form className="grid w-[40vw] h-[80vh] justify-items-center content-center gap-5">
+          <form className="grid w-[80vw] mt-10 md:mt-0 md:w-[40vw] h-[80vh] border-gray md:border-none border-[1px] py-5 md:py-0 justify-items-center content-center gap-5">
             <input
               className="input placeholder:text-darkgray outline-none"
               type="text"

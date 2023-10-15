@@ -4,11 +4,11 @@ import ScrollspyNav from "react-scrollspy-nav";
 
 function Footer() {
   return (
-    <div className="bg-darkgray h-[85vh]">
-      <div className="h-[75vh] flex justify-around pt-20 px-20">
-        <div className="w-[30vw]">
+    <div className="bg-darkgray h-fit md:h-[85vh]">
+      <div className="h-fit md:h-[75vh] flex justify-between flex-wrap pt-20 px-10 sm:px-20">
+        <div className="w-[80vw] md:w-[30vw] mb-10">
           <h2 className="text-primary text-2xl">About Me</h2>
-          <p className="text-gray pt-5 w-[80%]">
+          <p className="text-gray pt-5 w-full md:w-[80%]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe in
             autem corrupti veritatis aperiam a modi magnam asperiores facilis
             dolor harum impedit accusamus delectus, facere quis? Unde qui
@@ -16,7 +16,7 @@ function Footer() {
           </p>
         </div>
 
-        <div className="w-[15vw]">
+        <div className="w-[80vw] md:w-[15vw] mb-10">
           <h2 className="text-primary text-2xl">Links</h2>
 
           <ScrollspyNav
@@ -41,7 +41,7 @@ function Footer() {
           </ScrollspyNav>
         </div>
 
-        <div className="w-[15vw]">
+        <div className="hidden md:block w-[15vw]">
           <h2 className="text-primary text-2xl">Skills</h2>
 
           <div className="pt-5 grid gap-5 text-gray">
@@ -52,10 +52,12 @@ function Footer() {
           </div>
         </div>
 
-        <div className="w-[20vw]">
-          <h2 className="text-primary text-2xl text-center">Connect With Me</h2>
+        <div className="w-[80vw] md:w-[20vw] mb-20">
+          <h2 className="text-primary text-2xl md:text-center">
+            Connect With Me
+          </h2>
 
-          <div className="grid justify-items-center gap-3 mt-5">
+          <div className="flex md:grid justify-items-center gap-3 mt-5">
             <div className="bg-gray w-10 h-10 rounded-full flex items-center hover:bg-dark justify-center">
               <a
                 href="https://github.com/EnechukwuChibuike"
@@ -99,7 +101,7 @@ function Footer() {
         </div>
       </div>
 
-      <p className="text-gray text-center">
+      <p className="text-gray text-center px-5">
         Copyright ©2023 All rights reserved | Enechukwu Chibuike
       </p>
     </div>
