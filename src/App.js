@@ -55,11 +55,7 @@ function App(logo, height) {
           activeNavClass="active"
         >
           <Header className={sticky}>
-            <Logo
-              href="https://preview.colorlib.com/#ronaldo"
-              target="blank"
-              className={stickyNav}
-            >
+            <Logo href="#home" target="blank" className={stickyNav}>
               Enechukwu
             </Logo>
             <Div style={{ height: `${menu === false ? "0vh" : "50vh"}` }}>
@@ -125,6 +121,10 @@ const Header = styled.header`
     justify-content: space-between;
     padding: 0px 50px;
     background: #c5c6c7;
+  }
+
+  @media (max-width: 420px) {
+    padding: 0px 20px;
   }
 `;
 
