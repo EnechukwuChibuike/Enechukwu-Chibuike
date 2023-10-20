@@ -16,7 +16,7 @@ function Home(props) {
   }, [shuffle]);
   return (
     <div
-      className={`${props.height} grid items-center justify-center`}
+      className={`${props.height} min-h-screen grid items-center justify-center`}
       id="home"
     >
       <div className="text-center">

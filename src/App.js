@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import "./App.css";
 import styled from "styled-components";
 import Home from "./components/home";
@@ -10,14 +10,13 @@ import Resume from "./components/resume";
 import ScrollspyNav from "react-scrollspy-nav";
 import Footer from "./components/footer";
 
-function App(logo, height) {
+function App() {
   const [menu, setMenu] = useState(false);
 
   const [sticky, setSticky] = useState("");
   const [stickyNav, setStickyNav] = useState("");
-  const [stickyHeight, setStickyHeight] = useState("");
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.addEventListener("scroll", isSticky);
     return () => {
       window.removeEventListener("scroll", isSticky);
@@ -28,12 +27,10 @@ function App(logo, height) {
     const scrollTop = window.scrollY;
     const stickyClass =
       scrollTop >= 250 ? "fixed bg-[#c5c6c7] shadow-xl z-10" : "";
-    const stickynav = scrollTop >= 250 ? "text-[#0b0c10]" : "text-[#c5c6c7]";
-    const stickyheight = scrollTop >= 250 ? "h-[100vh]" : "h-[85vh]";
+    const stickynav = scrollTop >= 250 ? "text-dark" : "text-gray";
 
     setSticky(stickyClass);
     setStickyNav(stickynav);
-    setStickyHeight(stickyheight);
   };
 
   const handleClick = () => {
@@ -43,21 +40,21 @@ function App(logo, height) {
   return (
     <>
       <div className="App" id="home">
-        <ScrollspyNav
-          scrollTargetIds={[
-            "home",
-            "about",
-            "services",
-            "resume",
-            "contact",
-            "projects",
-          ]}
-          activeNavClass="active"
-        >
-          <Header className={sticky}>
-            <Logo href="#home" target="blank" className={stickyNav}>
-              Enechukwu
-            </Logo>
+        <Header className={sticky}>
+          <Logo href="/" className={stickyNav}>
+            Enechukwu
+          </Logo>
+          <ScrollspyNav
+            scrollTargetIds={[
+              "home",
+              "about",
+              "services",
+              "resume",
+              "contact",
+              "projects",
+            ]}
+            activeNavClass="active"
+          >
             <Div style={{ height: `${menu === false ? "0vh" : "50vh"}` }}>
               <Nav
                 className={stickyNav}
@@ -82,18 +79,18 @@ function App(logo, height) {
                 Contact
               </Nav>
             </Div>
-            <Media onClick={handleClick}>
-              <Menu>
-                <MenuIcon></MenuIcon>
-                <MenuIcon></MenuIcon>
-                <MenuIcon></MenuIcon>
-              </Menu>
-              <p>MENU</p>
-            </Media>
-          </Header>
-        </ScrollspyNav>
+          </ScrollspyNav>
+          <Media onClick={handleClick}>
+            <Menu>
+              <MenuIcon></MenuIcon>
+              <MenuIcon></MenuIcon>
+              <MenuIcon></MenuIcon>
+            </Menu>
+            <p>MENU</p>
+          </Media>
+        </Header>
 
-        <Home height={stickyHeight} />
+        <Home />
         <About />
         <Resume />
         <Services />

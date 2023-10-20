@@ -1,8 +1,44 @@
-import React from "react";
+import { useRef, useState } from "react";
 import Card from "./card";
 import { BsFillTelephoneFill, BsFillSendFill } from "react-icons/bs";
+import emailjs from "@emailjs/browser";
+import PulseLoader from "react-spinners/PulseLoader";
 
 function Contact() {
+  const [loader, setLoader] = useState(false);
+  const form = useRef();
+  const name = useRef();
+  const email = useRef();
+  const subject = useRef();
+  const message = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoader(true);
+    emailjs
+      .sendForm(
+        "service_scdmgug",
+        "template_t937k5p",
+        form.current,
+        "bOZHC71xqWARx_Ngd"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    setTimeout(() => {
+      name.current.value = "";
+      email.current.value = "";
+      subject.current.value = "";
+      message.current.value = "";
+      setLoader(false);
+    }, 3000);
+  };
   return (
     <div
       className="h-fit bg-dark py-32 border-t-gray border-b-[1px] text-center"
@@ -35,24 +71,33 @@ function Contact() {
               href={"mailto:enechukwuchibuike0@gmail.com"}
             />
           </div>
-          <form className="grid w-[80vw] mt-10 md:mt-0 md:w-[40vw] h-[80vh] border-gray md:border-none border-[1px] py-5 md:py-0 justify-items-center content-center gap-5">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="grid w-[80vw] mt-10 md:mt-0 md:w-[40vw] h-[80vh] border-gray md:border-none border-[1px] py-5 md:py-0 justify-items-center content-center gap-5"
+          >
             <input
               className="input placeholder:text-darkgray outline-none"
               type="text"
               required
+              name="from_name"
               placeholder="Your Name"
+              ref={name}
             />
             <input
               className="input placeholder:text-darkgray outline-none"
               type="email"
               required
               placeholder="Your Email"
+              name="user_email"
+              ref={email}
             />
             <input
               className="input placeholder:text-darkgray outline-none"
               type="text"
               required
               placeholder="Subject"
+              ref={subject}
             />
             <textarea
               className="pl-3 pt-3 rounded-md bg-gray w-[90%] placeholder:text-darkgray outline-none"
@@ -60,10 +105,12 @@ function Contact() {
               cols="30"
               rows="6"
               placeholder="Message"
+              name="message"
+              ref={message}
             ></textarea>
             <div className="flex justify-start w-[90%]">
-              <button className="bg-primary text-dark w-44 h-12 rounded-3xl">
-                Submit
+              <button className="flex items-center justify-center bg-primary hover:opacity-[0.8] text-dark w-44 h-12 rounded-3xl">
+                {loader === true ? <PulseLoader color="#36d7b7" /> : "Submit"}
               </button>
             </div>
           </form>
